@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
       image.setAttribute('src', responseData.cats[0].photo)
       // Inserts that <img> into one of the empty .cat-box divs
       divBox[0].appendChild(image)
+      image.alt = 'Photo of' + responseData.cats[0].name
+
 
 
 // Sets the alt attribute of the <img> to "Photo of (insert cat name here)"
