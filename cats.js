@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
         for(i = 0; i < responseData.cats.length; i++) {
         var image = document.createElement('img');
         var divBox = document.querySelectorAll('.cat-box');
-        image.setAttribute('src', responseData.cats[0].photo)
-        image.alt = 'Photo of ' + responseData.cats[0].name;
+        image.setAttribute('src', responseData.cats[i].photo)
+        image.alt = 'Photo of ' + responseData.cats[i].name;
+        divBox[i].innerHTML = ""
         divBox[i].appendChild(image);
       };
     });
